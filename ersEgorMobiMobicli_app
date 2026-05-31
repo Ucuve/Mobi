@@ -1,0 +1,11 @@
+[33m33f61e3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m 11 урок: добавил HTTP-клиент для Wikipedia API (summary, search, get_article), экспортировал функции, тесты проходят
+[33m3207fbd[m 10 урок: добавил тесты для JSON-моделей wikipedia (Summary, Article, SearchResults) с package:test, все тесты проходят
+[33m4e65b9d[m[33m ([m[1;31morigin/main[m[33m)[m 9 урок: создал пакет wikipedia, настроил workspace, добавил модели JSON (TitleSet, Summary, Article, SearchResults) с паттерн-матчингом
+[33m06f5c46[m 8 урок: улучшил HelpCommand (verbose, --command), добавил onOutput callback, исправил ошибку const indent
+[33m8192609[m 7 урок: добавил цветной вывод в консоль через ConsoleColor и TextRenderUtils, создал пример PrettyEcho
+[33ma95f408[m 6 урок: добавил обработку ошибок в command_runner: ArgumentException, onError callback, валидацию в parse
+[33m0165229[m 5 урок: добавил иерархию классов для парсинга аргументов (Argument, Option, Command), реализовал HelpCommand
+[33mcad1aea[m 4 урок: создал пакет command_runner, добавил локальную зависимость, заменил main на вызов CommandRunner
+[33m753608d[m 3 урок: добавил асинхронные запросы к Wikipedia API, программа получает реальные данные по команде wikipedia
+[33m92202a5[m 2 урок: сделал CLI интерактивным — программа различает команды version, help и search, а при поиске сама запрашивает тему, если её не ввели
+[33m287cf78[m 1 урок: создал Dart-проект, вывел Hello, Dart! в консоль
