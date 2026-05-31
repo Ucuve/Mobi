@@ -1,0 +1,10 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: ^3.12.0
+
+workspace:
+  - cli_app
+  - command_runner
+  - wikipedia

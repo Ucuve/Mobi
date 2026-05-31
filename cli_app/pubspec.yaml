@@ -1,5 +1,6 @@
 name: cli_app
 publish_to: none
+resolution: workspace
 description: A sample command-line application.
 version: 1.0.0
 
