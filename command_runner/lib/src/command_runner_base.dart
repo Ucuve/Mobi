@@ -6,9 +6,10 @@ import 'arguments.dart';
 import 'exceptions.dart';
 
 class CommandRunner {
-  CommandRunner({this.onError});
+  CommandRunner({this.onOutput, this.onError});
 
   final Map<String, Command> _commands = <String, Command>{};
+  FutureOr<void> Function(String)? onOutput;
   FutureOr<void> Function(Object)? onError;
 
   UnmodifiableSetView<Command> get commands =>
@@ -19,7 +20,11 @@ class CommandRunner {
       final ArgResults results = parse(input);
       if (results.command != null) {
         Object? output = await results.command!.run(results);
-        print(output.toString());
+        if (onOutput != null) {
+          await onOutput!(output.toString());
+        } else {
+          print(output.toString());
+        }
       }
     } on Exception catch (exception) {
       if (onError != null) {
@@ -114,7 +119,6 @@ class CommandRunner {
       i++;
     }
     results.options = inputOptions;
-
     return results;
   }
 
